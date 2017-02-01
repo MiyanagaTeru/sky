@@ -1,0 +1,147 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	height: 100%;
+	background-color: #b3e2ea;
+	overflow: hidden;
+}
+
+#clouds {
+	z-index: 0;
+	position: relative;
+}
+#clouds #cloud1 {
+	top: 100px;
+	-webkit-animation: floating linear infinite 15s;
+	animation: floating linear infinite 15s;
+}
+#clouds #cloud2 {
+	top: 300px;
+	-webkit-animation: floating 13s linear 5s infinite;
+	animation: floating 13s linear 5s infinite;
+}
+#clouds #cloud3 {
+	top: 600px;
+	-webkit-animation: floating 14s linear 7s infinite;
+	animation: floating 14s linear 7s infinite;
+}
+#clouds .cloud {
+	position: relative;
+	display: inline-block;
+	left: calc(0% - 275px);
+}
+#clouds .cloud .cloudleft {
+	position: absolute;
+	display: inline-block;
+	top: 30px;
+	left: 30px;
+	width: 100px;
+	height: 100px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+#clouds .cloud .cloudmiddle {
+	position: absolute;
+	display: inline-block;
+	top: 15px;
+	left: 70px;
+	width: 150px;
+	height: 130px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+#clouds .cloud .cloudright {
+	position: absolute;
+	display: inline-block;
+	top: 45px;
+	left: 185px;
+	width: 90px;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+@-webkit-keyframes floating {
+	from {
+		left: calc(0% - 275px);
+	}
+	to {
+		left: calc(100%);
+	}
+}
+@keyframes floating {
+	from {
+		left: calc(0% - 275px);
+	}
+	to {
+		left: calc(100%);
+	}
+}
+#flags {
+	z-index: 1;
+	position: relative;
+	width: 800px;
+	height: 600px;
+	margin: 100px auto;
+}
+#flags .header1 {
+	color: #fff;
+	font-family: Arial;
+	text-align: center;
+}
+#flags .flag {
+	background: orange;
+	position: relative;
+	overflow: hidden;
+	opacity: 0.8;
+	border-radius: 5px;
+	margin: 10px;
+}
+#flags .flag:hover {
+	opacity: 1;
+}
+#flags .flag .content {
+	text-align: center;
+	display: block;
+	padding: 20px;
+	height: 100%;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	font-size: 30px;
+	color: #fff;
+}
+#flags .flag .hill {
+	background: -webkit-linear-gradient(left, orange, #fbad2c, #ff9b00, orange);
+	background: linear-gradient(left, orange, #fbad2c, #ff9b00, orange);
+	z-index: 0;
+	width: 200px;
+	height: 90px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: -5px;
+	-webkit-animation: waving linear infinite 5s;
+	animation: waving linear infinite 5s;
+}
+@-webkit-keyframes waving {
+	from {
+		left: calc(0% - 200px);
+	}
+	to {
+		left: calc(100%);
+	}
+}
+@keyframes waving {
+	from {
+		left: calc(0% - 200px);
+	}
+	to {
+		left: calc(100%);
+	}
+}
